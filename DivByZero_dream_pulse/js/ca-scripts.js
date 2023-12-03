@@ -1,40 +1,33 @@
-var customerName = "Alliance  ";
-
-// <h1 id="tm-header" class="tm-brand text-uppercase"></h1> <!--todo: Add Customer Name-->
 function addCustomerName() {
-
-    let title = document.getElementById('title')
-    title.textContent = customerName;
-    
-    // <h1 id="tm-header" class="tm-brand text-uppercase"></h1> <!--todo: Add Customer Name-->
-
-    // <h2 id="introheader" class="tm-section-title mb-5 text-uppercase tm-color-primary"></h2> <!--todo: Add Customer Name-->
-
-};
-
+    let header = document.getElementById('tm-header');
+    header.textContent = customerName;
+}
 function toggleColors() {
-    // <!-- todo: Change all classes named 'tm-white-rect' to 'tm-blue-rect' -->
-
-};
+    let elements = document.querySelectorAll('.tm-white-rect');
+    elements.forEach(element => {
+        element.classList.replace('tm-white-rect', 'tm-blue-rect');
+    });
+}
 
 function hideElement() {
-    //<ul class="nav flex-row tm-social-links">  <!--todo: Hide social links-->
+    let socialLinks = document.querySelector('.nav.flex-row.tm-social-links');
+    if (socialLinks) {
+        socialLinks.style.display = 'none';
+    }
+}
 
-};
-
- function addText() {
-
-    //<p id="intropara1" class="tm-color-gray">  <!--todo: Add customer company introduction text about their founding year-->
-
-    //<p id="intropara2" class="mb-0 tm-color-gray"> <!--todo: Add customer company introduction text about what they lead in-->
-
-     //<p id="aboutpara1" id="a" class="mb-5"> <!--todo: Add customer company about text-->
-
-    //<p id="aboutpara2"> <!--todo: Add customer company motto text-->
-
-    // <p id="addresspara" class="mb-3"> <!--todo: Add customer company phone number text-->
-
-}; 
+function addAllianceToHeader() {
+    let introHeader = document.getElementById('introheader');
+    if (introHeader) {
+        introHeader.textContent += ' Alliance';
+    }
+}
 
 
-
+function addText() {
+    document.getElementById('intropara1').textContent = customerIntro1;
+    document.getElementById('intropara2').textContent = customerIntro2;
+    document.getElementById('aboutpara1').textContent = customerAbout1;
+    document.getElementById('aboutpara2').textContent = customerMotto;
+    document.getElementById('addresspara').textContent = customerPhoneNumber;
+}
