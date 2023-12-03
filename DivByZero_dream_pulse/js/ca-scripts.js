@@ -1,4 +1,5 @@
 function addCustomerName() {
+    let customerName = 'Customer Name'
     let header = document.getElementById('tm-header');
     header.textContent = customerName;
 }
@@ -17,6 +18,7 @@ function hideElement() {
 }
 
 function addAllianceToHeader() {
+    
     let introHeader = document.getElementById('introheader');
     if (introHeader) {
         introHeader.textContent += ' Alliance';
@@ -25,6 +27,12 @@ function addAllianceToHeader() {
 
 
 function addText() {
+    let customerIntro1 = 'Alliance was founded in 1931 by Albert Daniels.';
+    let customerIntro2 = 'The company is a leader in P.C. Manufacturing';
+    let customerAbout1 = 'We deliver the best service this side of creation';
+    let customerMotto = 'Our motto is satisfaction guaranteed';
+    let customerPhoneNumber = '1-800-565-5656';
+
     document.getElementById('intropara1').textContent = customerIntro1;
     document.getElementById('intropara2').textContent = customerIntro2;
     document.getElementById('aboutpara1').textContent = customerAbout1;
